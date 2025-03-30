@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maitree:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --font-primary: "Kanit", sans-serif;
+  --font-secondary: "Maitree", serif;
+
+  /* set base values */
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.2;
+
+  /* type scale */
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --text-xxl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --text-xxxl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --text-4xl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+}
+
+h1,
+h2 {
+  font-family: var(--font-primary);
+}
+
+p,
+a,
+label,
+input {
+  font-family: var(--font-secondary);
+  font-size: var(--text-base-size);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+    color:rgb(15, 171, 171);
+}
+
+h2 {
+    font-size: var(--text-xl);
+}
