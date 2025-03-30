@@ -38,6 +38,17 @@ const LandingPage = () => {
     setInputText(e.target.value);
   }
 
+  // Function to handle tag clicks
+  const handleTagClick = (tag) => {
+    // Check if tag is already in inputText
+    const currentTags = inputText.split(" ").filter(t => t.trim());
+    if (!currentTags.includes(tag)) {
+      // Add tag to existing input
+      const newInputText = inputText.trim() ? `${inputText} ${tag}` : tag;
+      setInputText(newInputText);
+    }
+  };
+
   return (
     <div className="container px-5 py-8 md:mx-10 ">
       <h1 className="font-bold text-center text-gray-800 mb-8">
@@ -67,6 +78,8 @@ const LandingPage = () => {
             mainImage={place.photos[0]}
             thumbnails={place.photos.slice(1, 4)}
             url={place.url}
+            tags={place.tags}
+            onTagClick={handleTagClick}
           />
         ))}
       </div>
